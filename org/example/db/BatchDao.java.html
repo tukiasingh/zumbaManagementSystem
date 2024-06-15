@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>BatchDao.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+BatchDao.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">org</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">db</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">model</span><span class="s2">.</span><span class="s1">Batch</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">PreparedStatement</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">ResultSet</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">ParseException</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">BatchDao </span><span class="s2">{</span>
+
+    <span class="s1">Batch batch </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Batch</span><span class="s2">();</span>
+    <span class="s1">DB db </span><span class="s2">= </span><span class="s1">DB</span><span class="s2">.</span><span class="s1">getDB</span><span class="s2">();</span>
+
+
+    <span class="s0">public int </span><span class="s1">addBatch</span><span class="s2">(</span><span class="s1">Batch batch</span><span class="s2">) {</span>
+        <span class="s0">int </span><span class="s1">result </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;insert into Batch values(null, ?,?)&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setString</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">batch</span><span class="s2">.</span><span class="s1">getTitle</span><span class="s2">());</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setString</span><span class="s2">(</span><span class="s3">2</span><span class="s2">, </span><span class="s1">batch</span><span class="s2">.</span><span class="s1">getStartTime</span><span class="s2">());</span>
+
+            <span class="s1">result </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeUpdate</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+
+
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">result</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public int </span><span class="s1">updateBatch</span><span class="s2">(</span><span class="s1">Batch batch</span><span class="s2">) {</span>
+        <span class="s0">int </span><span class="s1">result </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;update Batch set title=?, startTime = ? where bid = ?&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setString</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">batch</span><span class="s2">.</span><span class="s1">getTitle</span><span class="s2">());</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setString</span><span class="s2">(</span><span class="s3">2</span><span class="s2">, </span><span class="s1">batch</span><span class="s2">.</span><span class="s1">getStartTime</span><span class="s2">());</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setInt</span><span class="s2">(</span><span class="s3">3</span><span class="s2">, </span><span class="s1">batch</span><span class="s2">.</span><span class="s1">getBid</span><span class="s2">());</span>
+
+
+            <span class="s1">result </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeUpdate</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+
+
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">result</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+
+    <span class="s0">public int </span><span class="s1">getBatchBidByTitle</span><span class="s2">(</span><span class="s1">String title</span><span class="s2">) {</span>
+        <span class="s1">ResultSet resultSet </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">bid </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;We are trying to find bid for: &quot;</span><span class="s2">+</span><span class="s1">title</span><span class="s2">);</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;select bid from Batch where title = ?&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setString</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">title</span><span class="s2">);</span>
+            <span class="s1">resultSet </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeQuery</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">next</span><span class="s2">()) {</span>
+                <span class="s1">bid </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getInt</span><span class="s2">(</span><span class="s4">&quot;bid&quot;</span><span class="s2">);</span>
+
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Batch bid for &quot; </span><span class="s2">+</span><span class="s1">title</span><span class="s2">+</span><span class="s4">&quot; is: &quot;</span><span class="s2">+</span><span class="s1">bid</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s1">bid</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+
+
+    <span class="s0">public </span><span class="s1">String getBatchTitleByBid</span><span class="s2">(</span><span class="s0">int </span><span class="s1">bid</span><span class="s2">) {</span>
+        <span class="s1">ResultSet resultSet </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+        <span class="s1">String batchTitle </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;select title from Batch where bid = ?&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setInt</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">bid</span><span class="s2">);</span>
+            <span class="s1">resultSet </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeQuery</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">next</span><span class="s2">()) {</span>
+                <span class="s1">batchTitle </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s4">&quot;title&quot;</span><span class="s2">);</span>
+
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Batch name for bid&quot; </span><span class="s2">+</span><span class="s1">bid</span><span class="s2">+</span><span class="s4">&quot; is: &quot;</span><span class="s2">+</span><span class="s1">batchTitle</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s1">batchTitle</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getBatchTimeByBid</span><span class="s2">(</span><span class="s0">int </span><span class="s1">bid</span><span class="s2">) </span><span class="s0">throws </span><span class="s1">ParseException </span><span class="s2">{</span>
+        <span class="s1">ResultSet resultSet </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+        <span class="s1">String batchTime </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;select startTime from Batch where bid = ?&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setInt</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">bid</span><span class="s2">);</span>
+            <span class="s1">resultSet </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeQuery</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">next</span><span class="s2">()) {</span>
+                <span class="s1">batchTime </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s4">&quot;startTime&quot;</span><span class="s2">);</span>
+
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Batch startTime&quot; </span><span class="s2">+</span><span class="s1">bid</span><span class="s2">+</span><span class="s4">&quot; is: &quot;</span><span class="s2">+</span><span class="s1">batchTime</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s1">batchTime</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Batch</span><span class="s2">&gt; </span><span class="s1">getBatches</span><span class="s2">() {</span>
+        <span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Batch</span><span class="s2">&gt; </span><span class="s1">batches </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;();</span>
+        <span class="s1">ResultSet resultSet </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;select * from Batch&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">resultSet </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeQuery</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+            <span class="s0">while </span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">next</span><span class="s2">()) {</span>
+                <span class="s1">Batch batch </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Batch</span><span class="s2">();</span>
+                <span class="s1">batch</span><span class="s2">.</span><span class="s1">setBid</span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getInt</span><span class="s2">(</span><span class="s3">1</span><span class="s2">));</span>
+                <span class="s1">batch</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">2</span><span class="s2">));</span>
+                <span class="s1">batch</span><span class="s2">.</span><span class="s1">setStartTime</span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">3</span><span class="s2">));</span>
+
+                <span class="s1">batches</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">batch</span><span class="s2">);</span>
+
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">batches</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Batch getBatchByBid</span><span class="s2">(</span><span class="s0">int </span><span class="s1">bid</span><span class="s2">) {</span>
+        <span class="s1">ResultSet resultSet </span><span class="s2">= </span><span class="s0">null</span><span class="s2">;</span>
+<span class="s5">//        Batch batch = new Batch();</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;select * from Batch where bid = ?&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setInt</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">bid</span><span class="s2">);</span>
+            <span class="s1">resultSet </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeQuery</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">next</span><span class="s2">()) {</span>
+                <span class="s1">batch</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s4">&quot;title&quot;</span><span class="s2">));</span>
+                <span class="s1">batch</span><span class="s2">.</span><span class="s1">setStartTime</span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s4">&quot;startTime&quot;</span><span class="s2">));</span>
+                <span class="s1">batch</span><span class="s2">.</span><span class="s1">setBid</span><span class="s2">(</span><span class="s1">bid</span><span class="s2">);</span>
+
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">batch</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public int </span><span class="s1">deleteBatch</span><span class="s2">(</span><span class="s0">int </span><span class="s1">bid</span><span class="s2">) {</span>
+        <span class="s0">int </span><span class="s1">result </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+        <span class="s0">try </span><span class="s2">{</span>
+
+            <span class="s1">String sql </span><span class="s2">= </span><span class="s4">&quot;delete from Batch where bid = ?&quot;</span><span class="s2">;</span>
+            <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">sql</span><span class="s2">);</span>
+            <span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">setInt</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s1">bid</span><span class="s2">);</span>
+
+            <span class="s1">result </span><span class="s2">= </span><span class="s1">db</span><span class="s2">.</span><span class="s1">executeUpdate</span><span class="s2">(</span><span class="s1">preparedStatement</span><span class="s2">);</span>
+
+
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;[DAO]: Result value after trying to delete batch with bid: &quot;</span><span class="s2">+</span><span class="s1">bid</span><span class="s2">+</span><span class="s4">&quot; is: &quot;</span><span class="s2">+</span><span class="s1">result</span><span class="s2">);</span>
+        <span class="s0">return </span><span class="s1">result</span><span class="s2">;</span>
+
+    <span class="s2">}</span>
+
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="zms:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4313935e-1dc7-48a7-b374-1de4cd46b4ee" name="Changes" comment="committed">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6843b66f-ee32-4588-9da6-315d1fdff2b7.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/960_12_col.css.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MANIFEST.MF.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_Default.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/add-batch.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/add-participant.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addBatch.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addParticipant.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b93d7f02-50e8-45df-976a-7df0805ce5aa.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batches.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-theme.min.css.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap.min.css.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap.min.js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compiler.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createdFiles.lst.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataSources.local.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataSources.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deleteParticipant.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/encodings.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/findABatch.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getBatchesForParticipant.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getParticipantsForBatch.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/glyphicons-halflings-regular.svg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/header.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputFiles.lst.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jarRepositories.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javax_servlet_jstl.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maven-wrapper.properties.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/db/BatchAssignmentDao.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/db/BatchDao.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/db/DB.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/db/ParticipantDao.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/db/UserDao.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/db/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/model/Batch.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/model/BatchAssignment.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/model/Participant.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/model/User.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/model/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/BatchAssignmentController.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/BatchController.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/BatchFilter.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/Home.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/ParticipantController.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/ParticipantFilter.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/Register.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/zms/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/participants.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.properties.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/BatchAssignmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/BatchDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/DB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/ParticipantDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Batch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/BatchAssignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Participant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/BatchAssignmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/BatchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/BatchFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/ParticipantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/ParticipantFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/zms/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/addBatch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/addParticipant.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/batches.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/findABatch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/getBatchesForParticipant.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/getParticipantsForBatch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/check-out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/zumba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/participants.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateBatch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateParticipant.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uiDesigner.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update-batch.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update-participant.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/updateBatch.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/updateParticipant.jsp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vcs.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webContexts.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspace.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zms.oNcBAA.meta.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Servlet" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2gAREnHosxlhuKKPwbaha1gKQ2W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vijay/IdeaProjects/zms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4042751",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "mysql",
+      "java.sql.Driver"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.23" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.23" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="openjdk-22">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="zms:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/zms" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="4021af89-07c9-488c-ad1d-ae10e6a5b1e3" />
+        <option name="HTTP_PORT" value="9091" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="44601" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="zms" />
+          <artifact name="zms:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4313935e-1dc7-48a7-b374-1de4cd46b4ee" name="Changes" comment="" />
+      <created>1715138290193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715138290193</updated>
+      <workItem from="1715138291805" duration="12783000" />
+      <workItem from="1715536787950" duration="28231000" />
+      <workItem from="1715629406401" duration="31011000" />
+      <workItem from="1715909740187" duration="64008000" />
+      <workItem from="1716648333838" duration="1792000" />
+      <workItem from="1716656062874" duration="303000" />
+      <workItem from="1716657048846" duration="60983000" />
+      <workItem from="1716954350845" duration="50939000" />
+      <workItem from="1717120276721" duration="4089000" />
+      <workItem from="1717377712408" duration="67000" />
+      <workItem from="1717812633051" duration="3511000" />
+      <workItem from="1718114629676" duration="24872000" />
+      <workItem from="1718326123291" duration="1299000" />
+      <workItem from="1718407173887" duration="10775000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="committed" />
+    <option name="LAST_COMMIT_MESSAGE" value="committed" />
+  </component>
+</project>

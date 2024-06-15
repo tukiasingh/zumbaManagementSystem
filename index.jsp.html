@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>index.jsp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d; font-weight: bold;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #bcbec4;}
+.s5 { color: #d5b778;}
+.s6 { color: #bababa;}
+.s7 { color: #6aab73;}
+.s8 { color: #cf8e6d;}
+.s9 { color: #56a8f5;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.jsp</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;%@ </span><span class="s1">page </span><span class="s2">contentType</span><span class="s0">=&quot;</span><span class="s3">text/html; charset=UTF-8</span><span class="s0">&quot; </span><span class="s2">pageEncoding</span><span class="s0">=&quot;</span><span class="s3">UTF-8</span><span class="s0">&quot; %&gt;</span>
+<span class="s5">&lt;!DOCTYPE </span><span class="s6">html</span><span class="s5">&gt;</span>
+<span class="s5">&lt;html&gt;</span>
+<span class="s5">&lt;head&gt;</span>
+  <span class="s5">&lt;title&gt;</span><span class="s4">Zumba Management System</span><span class="s5">&lt;/title&gt;</span>
+<span class="s5">&lt;/head&gt;</span>
+<span class="s5">&lt;link </span><span class="s6">rel</span><span class="s7">=&quot;stylesheet&quot; </span><span class="s6">type</span><span class="s7">=&quot;text/css&quot; </span><span class="s6">href</span><span class="s7">=&quot;css/bootstrap.min.css&quot;</span><span class="s5">&gt;</span>
+
+<span class="s5">&lt;body&gt;</span>
+
+
+
+    <span class="s5">&lt;div </span><span class="s6">id</span><span class="s7">=&quot;header&quot; </span><span class="s6">class</span><span class="s7">=&quot;page-header text-center text-info&quot; </span><span class="s5">&gt;</span>
+      <span class="s5">&lt;h1&gt; </span><span class="s4">Zumba Management System</span><span class="s5">&lt;/h1&gt;</span>
+    <span class="s5">&lt;/div&gt;</span>
+    <span class="s5">&lt;div </span><span class="s6">class</span><span class="s7">=&quot;container&quot; </span><span class="s5">&gt;</span>
+    <span class="s5">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</span>
+    <span class="s5">&lt;div </span><span class="s6">id</span><span class="s7">=&quot;login&quot; </span><span class="s6">class</span><span class="s7">=&quot;col-md-4 align-content-center&quot;</span><span class="s5">&gt;</span>
+      <span class="s5">&lt;h3&gt;</span><span class="s8">&lt;%= </span><span class="s3">&quot;Welcome back!&quot; </span><span class="s8">%&gt;</span><span class="s5">&lt;/h3&gt;</span>
+      <span class="s5">&lt;h5&gt;</span><span class="s4">Log in to continue...</span><span class="s5">&lt;/h5&gt;</span>
+      <span class="s5">&lt;form </span><span class="s6">action</span><span class="s7">=&quot;home&quot; </span><span class="s6">method</span><span class="s7">=&quot;post&quot;</span><span class="s5">&gt;</span>
+        <span class="s5">&lt;label </span><span class="s6">for</span><span class="s7">=&quot;email&quot;</span><span class="s5">&gt; </span><span class="s4">Enter Email</span><span class="s5">&lt;/label&gt; &lt;br&gt;</span>
+        <span class="s5">&lt;input </span><span class="s6">id</span><span class="s7">=&quot;email&quot; </span><span class="s6">type</span><span class="s7">=&quot;text&quot; </span><span class="s6">name</span><span class="s7">=&quot;textEmail&quot; </span><span class="s6">placeholder</span><span class="s7">=&quot;eg. john@example.com&quot;</span><span class="s5">&gt;&lt;br&gt;&lt;br&gt;</span>
+        <span class="s5">&lt;label </span><span class="s6">for</span><span class="s7">=&quot;password&quot;</span><span class="s5">&gt; </span><span class="s4">Enter Password</span><span class="s5">&lt;/label&gt;&lt;br&gt;</span>
+        <span class="s5">&lt;input </span><span class="s6">id</span><span class="s7">=&quot;password&quot; </span><span class="s6">type</span><span class="s7">=&quot;password&quot; </span><span class="s6">name</span><span class="s7">=&quot;textPassword&quot; </span><span class="s6">placeholder</span><span class="s7">=&quot;min. 6 characters password&quot;</span><span class="s5">&gt;&lt;br&gt;&lt;br&gt;</span>
+        <span class="s5">&lt;button </span><span class="s6">class</span><span class="s7">=&quot;btn-primary&quot; </span><span class="s6">type</span><span class="s7">=&quot;submit&quot; </span><span class="s5">&gt;</span><span class="s4">Login</span><span class="s5">&lt;/button&gt;</span>
+      <span class="s5">&lt;/form&gt; &lt;br&gt;</span>
+      <span class="s5">&lt;p&gt;</span><span class="s4">Don't have an account? </span><span class="s5">&lt;a </span><span class="s6">href</span><span class="s7">=&quot;register.jsp&quot;</span><span class="s5">&gt; </span><span class="s4">Sign Up</span><span class="s5">&lt;/a&gt; &lt;/p&gt;</span>
+    <span class="s5">&lt;/div&gt;</span>
+
+
+
+
+
+    <span class="s5">&lt;div </span><span class="s6">id</span><span class="s7">=&quot;img&quot; </span><span class="s6">class</span><span class="s7">=&quot;column-gap-md-0&quot;</span><span class="s5">&gt;</span>
+      <span class="s5">&lt;figure &gt;</span>
+        <span class="s5">&lt;img </span><span class="s6">src</span><span class="s7">=&quot;images/zumba.png&quot; </span><span class="s6">alt</span><span class="s7">=&quot;zumba&quot; </span><span class="s6">height</span><span class="s7">=&quot;200&quot; </span><span class="s6">width</span><span class="s7">=&quot;200&quot;</span><span class="s5">&gt;</span>
+      <span class="s5">&lt;/figure&gt;</span>
+    <span class="s5">&lt;/div&gt;</span>
+
+
+
+
+
+
+
+
+
+
+  <span class="s5">&lt;div </span><span class="s6">id</span><span class="s7">=&quot;footer&quot; </span><span class="s6">class</span><span class="s7">=&quot;modal-footer&quot;</span><span class="s5">&gt;</span>
+    <span class="s5">&lt;p&gt;</span><span class="s9">&amp;copy; </span><span class="s4">Copyright 2024 Zumba Management System</span><span class="s5">&lt;/p&gt;</span>
+  <span class="s5">&lt;/div&gt;</span>
+
+    <span class="s5">&lt;/div&gt;</span>
+
+
+
+
+
+<span class="s5">&lt;/body&gt;</span>
+<span class="s5">&lt;/html&gt;</span></pre>
+</body>
+</html>

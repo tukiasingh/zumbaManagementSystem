@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>getBatchesForParticipant.jsp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d; font-weight: bold;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.s5 { color: #d5b778;}
+.s6 { color: #bababa;}
+.s7 { color: #6aab73;}
+.s8 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+getBatchesForParticipant.jsp</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">&lt;%@ </span><span class="s2">page </span><span class="s3">contentType</span><span class="s1">=&quot;</span><span class="s4">text/html;charset=UTF-8</span><span class="s1">&quot; </span><span class="s3">language</span><span class="s1">=&quot;</span><span class="s4">java</span><span class="s1">&quot; %&gt;</span>
+<span class="s1">&lt;%@ </span><span class="s2">taglib </span><span class="s3">prefix</span><span class="s1">=&quot;</span><span class="s4">c</span><span class="s1">&quot; </span><span class="s3">uri</span><span class="s1">=&quot;</span><span class="s4">http://java.sun.com/jsp/jstl/core</span><span class="s1">&quot; %&gt;</span>
+<span class="s1">&lt;%@ </span><span class="s2">taglib </span><span class="s3">prefix</span><span class="s1">=&quot;</span><span class="s4">fmt</span><span class="s1">&quot; </span><span class="s3">uri</span><span class="s1">=&quot;</span><span class="s4">http://java.sun.com/jsp/jstl/fmt</span><span class="s1">&quot; %&gt;</span>
+<span class="s5">&lt;html&gt;</span>
+<span class="s5">&lt;head&gt;</span>
+    <span class="s5">&lt;title&gt;</span><span class="s0">Title</span><span class="s5">&lt;/title&gt;</span>
+    <span class="s5">&lt;link </span><span class="s6">rel</span><span class="s7">=&quot;stylesheet&quot; </span><span class="s6">href</span><span class="s7">=&quot;css/bootstrap.min.css&quot;</span><span class="s5">&gt;</span>
+    <span class="s5">&lt;script </span><span class="s6">src</span><span class="s7">=&quot;js/bootstrap.min.js&quot;</span><span class="s5">&gt;&lt;/script&gt;</span>
+<span class="s5">&lt;/head&gt;</span>
+<span class="s5">&lt;body&gt;</span>
+<span class="s5">&lt;div </span><span class="s6">class</span><span class="s7">=&quot;container&quot;</span><span class="s5">&gt;</span>
+    <span class="s1">&lt;</span><span class="s2">jsp:include </span><span class="s3">page</span><span class="s4">=&quot;header.html&quot;</span><span class="s1">&gt;&lt;/</span><span class="s2">jsp:include</span><span class="s1">&gt;</span>
+
+    <span class="s5">&lt;h4&gt; </span><span class="s0">Showing Batches for participant </span><span class="s8">${</span><span class="s3">participantName</span><span class="s8">}</span><span class="s5">&lt;/h4&gt; &lt;br&gt;</span>
+        <span class="s5">&lt;table  </span><span class="s6">class</span><span class="s7">=&quot;table table-striped&quot;</span><span class="s5">&gt;</span>
+            <span class="s5">&lt;thead&gt;</span>
+            <span class="s5">&lt;tr&gt;</span>
+                <span class="s5">&lt;td&gt;</span><span class="s0">Batch ID</span><span class="s5">&lt;/td&gt;</span>
+                <span class="s5">&lt;td&gt;</span><span class="s0">Class</span><span class="s5">&lt;/td&gt;</span>
+                <span class="s5">&lt;td&gt;</span><span class="s0">Time</span><span class="s5">&lt;/td&gt;</span>
+                <span class="s5">&lt;td&gt;</span><span class="s0">Action</span><span class="s5">&lt;/td&gt;</span>
+            <span class="s5">&lt;/tr&gt;</span>
+            <span class="s5">&lt;/thead&gt;</span>
+            <span class="s1">&lt;</span><span class="s2">c:forEach </span><span class="s3">var</span><span class="s4">=&quot;batch&quot; </span><span class="s3">items</span><span class="s4">=&quot;</span><span class="s8">${</span><span class="s3">batches</span><span class="s8">}</span><span class="s4">&quot;</span><span class="s1">&gt;</span>
+                <span class="s5">&lt;tr&gt;</span>
+                    <span class="s5">&lt;td&gt;</span><span class="s8">${</span><span class="s3">batch.getBid()</span><span class="s8">}</span><span class="s5">&lt;/td&gt;</span>
+                    <span class="s5">&lt;td&gt;</span><span class="s8">${</span><span class="s3">batch.getTitle()</span><span class="s8">}</span><span class="s5">&lt;/td&gt;</span>
+                    <span class="s5">&lt;td </span><span class="s6">type</span><span class="s7">=&quot;datetime-local&quot;</span><span class="s5">&gt;</span><span class="s8">${</span><span class="s3">batch.getStartTime()</span><span class="s8">}</span><span class="s0">&gt;</span><span class="s5">&lt;/td&gt;</span>
+                    <span class="s5">&lt;td&gt;</span>
+                        <span class="s5">&lt;button </span><span class="s6">type</span><span class="s7">=&quot;button&quot; </span><span class="s6">class</span><span class="s7">=&quot;btn btn-warning&quot;</span>
+                                <span class="s6">onclick</span><span class="s7">=&quot;</span><span class="s0">window.location=</span><span class="s7">'batch-assignment?pid=</span><span class="s8">${</span><span class="s3">pid</span><span class="s8">}</span><span class="s7">&amp;bid=</span><span class="s8">${</span><span class="s3">batch.getBid()</span><span class="s8">}</span><span class="s7">&amp;crudOperationType=unregisterToBatch'&quot;</span><span class="s5">&gt;</span><span class="s0">Unregister</span><span class="s5">&lt;/button&gt;</span>
+
+                    <span class="s5">&lt;/td&gt;</span>
+                <span class="s5">&lt;/tr&gt;</span>
+            <span class="s1">&lt;/</span><span class="s2">c:forEach</span><span class="s1">&gt;</span>
+        <span class="s5">&lt;/table&gt;</span>
+    <span class="s5">&lt;/div&gt;</span>
+
+<span class="s5">&lt;/body&gt;</span>
+<span class="s5">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>

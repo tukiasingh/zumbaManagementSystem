@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>ParticipantController.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ParticipantController.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">org</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">zms</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">db</span><span class="s2">.</span><span class="s1">ParticipantDao</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">model</span><span class="s2">.</span><span class="s1">Participant</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">io</span><span class="s2">.</span><span class="s1">PrintWriter</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">servlet</span><span class="s2">.</span><span class="s1">ServletException</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">servlet</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">WebServlet</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">servlet</span><span class="s2">.</span><span class="s1">http</span><span class="s2">.</span><span class="s1">HttpServlet</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">servlet</span><span class="s2">.</span><span class="s1">http</span><span class="s2">.</span><span class="s1">HttpServletRequest</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">servlet</span><span class="s2">.</span><span class="s1">http</span><span class="s2">.</span><span class="s1">HttpServletResponse</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">io</span><span class="s2">.</span><span class="s1">IOException</span><span class="s2">;</span>
+
+<span class="s1">@WebServlet</span><span class="s2">(</span><span class="s1">name </span><span class="s2">=</span><span class="s3">&quot;ParticipantController&quot;</span><span class="s2">, </span><span class="s1">value </span><span class="s2">= </span><span class="s3">&quot;/participant-controller&quot;</span><span class="s2">)</span>
+
+<span class="s0">public class </span><span class="s1">ParticipantController </span><span class="s0">extends </span><span class="s1">HttpServlet </span><span class="s2">{</span>
+
+    <span class="s1">Participant participant </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Participant</span><span class="s2">();</span>
+    <span class="s1">ParticipantDao dao </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ParticipantDao</span><span class="s2">();</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">service</span><span class="s2">(</span><span class="s1">HttpServletRequest request</span><span class="s2">, </span><span class="s1">HttpServletResponse response</span><span class="s2">) </span><span class="s0">throws </span><span class="s1">ServletException</span><span class="s2">, </span><span class="s1">IOException </span><span class="s2">{</span>
+
+        <span class="s1">response</span><span class="s2">.</span><span class="s1">setContentType</span><span class="s2">(</span><span class="s3">&quot;text/html&quot;</span><span class="s2">);</span>
+        <span class="s1">PrintWriter out </span><span class="s2">= </span><span class="s1">response</span><span class="s2">.</span><span class="s1">getWriter</span><span class="s2">();</span>
+
+        <span class="s1">participant</span><span class="s2">.</span><span class="s1">setName</span><span class="s2">(</span><span class="s1">request</span><span class="s2">.</span><span class="s1">getParameter</span><span class="s2">(</span><span class="s3">&quot;textName&quot;</span><span class="s2">));</span>
+        <span class="s1">participant</span><span class="s2">.</span><span class="s1">setPhoneNumber</span><span class="s2">(</span><span class="s1">request</span><span class="s2">.</span><span class="s1">getParameter</span><span class="s2">(</span><span class="s3">&quot;textPhone&quot;</span><span class="s2">));</span>
+        <span class="s1">participant</span><span class="s2">.</span><span class="s1">setEmail</span><span class="s2">(</span><span class="s1">request</span><span class="s2">.</span><span class="s1">getParameter</span><span class="s2">(</span><span class="s3">&quot;textEmail&quot;</span><span class="s2">));</span>
+<span class="s4">//        participant.setPid(Integer.parseInt(request.getParameter(&quot;pid&quot;)));</span>
+<span class="s4">//        participant.setPid(Integer.parseInt(request.getParameter(&quot;textParticipantId&quot;)));</span>
+
+        <span class="s1">String crudOperationType </span><span class="s2">= </span><span class="s1">request</span><span class="s2">.</span><span class="s1">getParameter</span><span class="s2">(</span><span class="s3">&quot;crudOperationType&quot;</span><span class="s2">);</span>
+
+        <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h2&gt;CRUD Operation: &quot;</span><span class="s2">+</span><span class="s1">crudOperationType</span><span class="s2">+</span><span class="s3">&quot;&lt;/h2&gt;&quot;</span><span class="s2">);</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">crudOperationType</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s3">&quot;addParticipant&quot;</span><span class="s2">)) {</span>
+
+            <span class="s0">int </span><span class="s1">result </span><span class="s2">= </span><span class="s1">dao</span><span class="s2">.</span><span class="s1">addParticipant</span><span class="s2">(</span><span class="s1">participant</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">result </span><span class="s2">&gt; </span><span class="s5">0</span><span class="s2">) {</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;&quot; </span><span class="s2">+ </span><span class="s1">participant</span><span class="s2">.</span><span class="s1">getName</span><span class="s2">() + </span><span class="s3">&quot; added Successfully! &lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;home&quot;</span><span class="s2">);</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Something went wrong! Please try again.&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;home&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">else if</span><span class="s2">(</span><span class="s1">crudOperationType</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s3">&quot;updateParticipant&quot;</span><span class="s2">)) {</span>
+            <span class="s1">participant</span><span class="s2">.</span><span class="s1">setPid</span><span class="s2">(</span><span class="s1">Integer</span><span class="s2">.</span><span class="s1">parseInt</span><span class="s2">(</span><span class="s1">request</span><span class="s2">.</span><span class="s1">getParameter</span><span class="s2">(</span><span class="s3">&quot;pid&quot;</span><span class="s2">)));</span>
+            <span class="s0">int </span><span class="s1">result </span><span class="s2">= </span><span class="s1">dao</span><span class="s2">.</span><span class="s1">updateParticipant</span><span class="s2">(</span><span class="s1">participant</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">result </span><span class="s2">&gt; </span><span class="s5">0</span><span class="s2">) {</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;&quot; </span><span class="s2">+ </span><span class="s1">participant</span><span class="s2">.</span><span class="s1">getName</span><span class="s2">() + </span><span class="s3">&quot; updated Successfully! &lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;participant-filter?jspPageType=showParticipantPage&quot;</span><span class="s2">);</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Update Operation Failed! Please try again.&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;participant-filter?jspPageType=showParticipantPage&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">else if</span><span class="s2">(</span><span class="s1">crudOperationType</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s3">&quot;deleteParticipant&quot;</span><span class="s2">)) {</span>
+            <span class="s0">int </span><span class="s1">pid </span><span class="s2">= </span><span class="s1">Integer</span><span class="s2">.</span><span class="s1">parseInt</span><span class="s2">(</span><span class="s1">request</span><span class="s2">.</span><span class="s1">getParameter</span><span class="s2">(</span><span class="s3">&quot;pid&quot;</span><span class="s2">));</span>
+            <span class="s0">int </span><span class="s1">result </span><span class="s2">= </span><span class="s1">dao</span><span class="s2">.</span><span class="s1">deleteParticipant</span><span class="s2">(</span><span class="s1">pid</span><span class="s2">);</span>
+            <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Got a request to delete participant with pid: &quot;</span><span class="s2">+ </span><span class="s1">pid</span><span class="s2">);</span>
+            <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Going to delete participant: &quot;</span><span class="s2">+ </span><span class="s1">dao</span><span class="s2">.</span><span class="s1">getParticipantNameByPid</span><span class="s2">(</span><span class="s1">pid</span><span class="s2">));</span>
+            <span class="s1">String participantName </span><span class="s2">= </span><span class="s1">dao</span><span class="s2">.</span><span class="s1">getParticipantNameByPid</span><span class="s2">(</span><span class="s1">pid</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">result </span><span class="s2">&gt; </span><span class="s5">0</span><span class="s2">) {</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;&quot; </span><span class="s2">+ </span><span class="s1">dao</span><span class="s2">.</span><span class="s1">getParticipantNameByPid</span><span class="s2">(</span><span class="s1">pid</span><span class="s2">) + </span><span class="s3">&quot; deleted Successfully! &lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;participant-filter?jspPageType=showParticipantPage&quot;</span><span class="s2">);</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Delete Operation Failed! Please try again.&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+                <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;participant-filter?jspPageType=showParticipantPage&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+
+
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h2&gt;Invalid CRUD operation!&lt;/h2&gt;&quot;</span><span class="s2">);</span>
+            <span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;&lt;h4&gt;Redirecting...&lt;/h4&gt;&quot;</span><span class="s2">);</span>
+            <span class="s1">response</span><span class="s2">.</span><span class="s1">sendRedirect</span><span class="s2">(</span><span class="s3">&quot;participant-filter?jspPageType=showParticipantPage&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
