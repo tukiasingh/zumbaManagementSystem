@@ -32,6 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "tukiasingh"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:tukiasingh/zumbaManagementSystem.git",
+    "accountId": "271731fc-77d8-48fd-876e-50e11f8a2f02"
+  }
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -222,7 +234,7 @@
       <workItem from="1717812633051" duration="3511000" />
       <workItem from="1718114629676" duration="24872000" />
       <workItem from="1718326123291" duration="1299000" />
-      <workItem from="1718407173887" duration="11721000" />
+      <workItem from="1718407173887" duration="12029000" />
     </task>
     <task id="LOCAL-00001" summary="committed">
       <option name="closed" value="true" />
@@ -232,7 +244,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718433130501</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="committed">
+      <option name="closed" value="true" />
+      <created>1718433404843</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718433404843</updated>
+    </task>
+    <task id="LOCAL-00003" summary="committed">
+      <option name="closed" value="true" />
+      <created>1718433429847</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718433429847</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
