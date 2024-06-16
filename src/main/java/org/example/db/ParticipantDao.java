@@ -90,7 +90,6 @@ public class ParticipantDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("[DAO]: Result value after trying to delete participant with pid: "+pid+" is: "+result);
         return result;
 
     }
@@ -141,7 +140,6 @@ public class ParticipantDao {
     public Participant getParticipantByPid(int pid) {
         ResultSet resultSet = null;
         String name = null;
-//        Participant participant = new Participant();
         try {
             String sql = "select * from Participant where pid = ?";
             PreparedStatement preparedStatement = db.connection.prepareStatement(sql);
@@ -158,7 +156,6 @@ public class ParticipantDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        System.out.println("Participant name for pid" +pid+" is: "+name);
         return participant;
 
     }

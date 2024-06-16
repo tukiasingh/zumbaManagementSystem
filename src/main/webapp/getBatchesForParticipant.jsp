@@ -26,7 +26,7 @@
                 <tr>
                     <td>${batch.getBid()}</td>
                     <td>${batch.getTitle()}</td>
-                    <td type="datetime-local">${batch.getStartTime()}></td>
+                    <td type="datetime-local">${batch.getStartTime()}</td>
                     <td>
                         <button type="button" class="btn btn-warning"
                                 onclick="window.location='batch-assignment?pid=${pid}&bid=${batch.getBid()}&crudOperationType=unregisterToBatch'">Unregister</button>

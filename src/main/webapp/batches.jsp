@@ -14,6 +14,8 @@
     <jsp:include page="header.html"></jsp:include>
 
     <h5>Batches</h5> <br>
+    <button type="button" class="btn btn-primary align-content-sm-end"
+            onclick="window.location='batch-filter?jspPageType=addBatchPage'">Add Batch</button>
     <table  class="table table-striped">
         <thead>
         <tr>

@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 public class BatchAssignmentDao {
 
-    Participant participant = new Participant();
-    Batch batch = new Batch();
     DB db = DB.getDB();
 
 

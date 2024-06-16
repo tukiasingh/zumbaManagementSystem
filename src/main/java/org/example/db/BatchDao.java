@@ -139,7 +139,6 @@ public class BatchDao {
 
     public Batch getBatchByBid(int bid) {
         ResultSet resultSet = null;
-//        Batch batch = new Batch();
         try {
             String sql = "select * from Batch where bid = ?";
             PreparedStatement preparedStatement = db.connection.prepareStatement(sql);
